@@ -1,5 +1,6 @@
 # home/views.py
 from django.shortcuts import render
+from . models import Movie
 
 def index(request):
     template_data = {}
@@ -14,3 +15,7 @@ def privacy_policy(request):
 
 def contact_us(request):
     return render(request, 'home/contact_us.html' )
+
+def movie_list(request):
+    movies = Movie.objects.all()
+    return render(request, 'home/movie_list.html', {'movie_list':movies})
