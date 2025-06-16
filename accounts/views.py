@@ -75,3 +75,8 @@ def edit_profile(request):
         form = UserChangeForm(instance=request.user)
 
     return render(request, 'accounts/edit_profile.html', {'form': form})
+
+
+def privacy_policy(request):
+    template_data = {'title': 'Privacy Policy'}
+    return render(request, 'accounts/privacy_policy.html', template_data)

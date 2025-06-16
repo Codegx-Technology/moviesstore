@@ -55,92 +55,69 @@
     </main>
 
     <!-- Footer Section -->
-    <footer>
-
-        <!-- Main Footer -->
-        <section class="p-3 ms-footer d-none d-md-block mt">
-            <div class="container">
-                <div class="row mt-3 text-white">
-                    <!-- About Section -->
-                    <div class="col-md-6 col-lg-6 col-xl-6 mx-auto mb-4">
-                        <b>MOVIES STORE</b>
-                        <hr />
-                        <p>
-                            Welcome to Movies Store, your premier online
-                            destination for a cinematic adventure like no
-                            other! Dive into the world of movies from the
-                            comfort of your own home with our user-friendly
-                            and immersive online movie store.
-                        </p>
-                    </div>
-
-                    <!-- Navigation Links Section -->
-                    <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4">
-                        <b>LINKS</b>
-                        <hr />
-                        <p><a class="nav-link" href="{% url 'home:about' %}">About</a></p>
-                        <p><a class="nav-link" href="#">Movies</a></p>
-                        <p><a class="nav-link" href="#">Contact</a></p>
-                        <p><a class="nav-link" href="#">Cart</a></p>
-                        <p><a class="nav-link" href="{% url 'accounts:login' %}">Login</a></p>
-                    </div>
-
-                    <!-- Contact Info Section -->
-                    <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4">
-                        <b>CONTACT</b>
-                        <hr />
-                        <p><i class="fas fa-home me-2"></i>Nairobi, Kenya</p>
-                        <p><i class="fas fa-envelope me-2"></i>info@scitt.tech.it</p>
-                        <p><i class="fas fa-phone me-2"></i>+254-734 957</p>
-                    </div>
+    <footer class="bg-dark text-white pt-4">
+        <div class="container">
+            <div class="row">
+                <!-- About Section -->
+                <div class="col-md-5 mb-4">
+                    <h5 class="fw-bold">MOVIES STORE</h5>
+                    <hr class="bg-secondary" />
+                    <p class="small">
+                        Welcome to Movies Store, your premier online destination for a cinematic adventure like no other! Dive into the world of movies from the comfort of your own home with our user-friendly and immersive online movie store.
+                    </p>
+                </div>
+                <!-- Navigation Links Section -->
+                <div class="col-md-3 mb-4">
+                    <h6 class="fw-bold">LINKS</h6>
+                    <hr class="bg-secondary" />
+                    <ul class="list-unstyled small">
+                        <li><a class="nav-link px-0 text-white-50" href="{% url 'home:about' %}">About</a></li>
+                        <li><a class="nav-link px-0 text-white-50" href="#">Movies</a></li>
+                        <li><a class="nav-link px-0 text-white-50" href="#">Contact</a></li>
+                        <li><a class="nav-link px-0 text-white-50" href="#">Cart</a></li>
+                        <li><a class="nav-link px-0 text-white-50" href="{% url 'accounts:login' %}">Login</a></li>
+                    </ul>
+                </div>
+                <!-- Contact Info Section -->
+                <div class="col-md-4 mb-4">
+                    <h6 class="fw-bold">CONTACT</h6>
+                    <hr class="bg-secondary" />
+                    <ul class="list-unstyled small">
+                        <li><i class="fas fa-home me-2"></i>Nairobi, Kenya</li>
+                        <li><i class="fas fa-envelope me-2"></i>info@scitt.tech.it</li>
+                        <li><i class="fas fa-phone me-2"></i>+254-734 957</li>
+                    </ul>
                 </div>
             </div>
-        </section>
-
-        <!-- Bottom Footer -->
-        <section class="p-3 ms-footer-bottom bg-dark">
-            <div class="container d-flex justify-content-between">
-                <!-- Developer Credit -->
-                <div class="me-5 text-white">
-                    <span>
-                        Designed & Developed by
-                        <a href="https://www.scitt.tech.it" target="_blank" class="text-white text-decoration-none">SCITT Cohort 2025</a>
-                    </span>
+            <div class="row align-items-center pb-3">
+                <div class="col-md-6 mb-2 mb-md-0">
+                    <div class="d-flex align-items-center">
+                        <span class="me-3">Follow us:</span>
+                        <a href="#" class="text-white-50 me-2"><i class="fa-brands fa-instagram fa-sm"></i></a>
+                        <a href="#" class="text-white-50 me-2"><i class="fa-brands fa-facebook fa-sm"></i></a>
+                        <a href="#" class="text-white-50 me-2"><i class="fa-brands fa-square-x-twitter fa-sm"></i></a>
+                        <a href="#" class="text-white-50"><i class="fa-brands fa-youtube fa-sm"></i></a>
+                    </div>
                 </div>
-
-                <!-- Copyright -->
-                <div class="text-white">
-                    <span>© 2025 Movies Store. All Rights Reserved.</span>
+                <div class="col-md-6 text-md-end">
+                    <a href="/" class="text-white-50 text-decoration-none mx-2 small">Home</a>
+                    <a href="{% url 'home:about' %}" class="text-white-50 text-decoration-none mx-2 small">About Us</a>
+                    <a href="#" class="text-white-50 text-decoration-none mx-2 small">Contact</a>
+                    <a href="#" class="text-white-50 text-decoration-none mx-2 small">Movies</a>
                 </div>
             </div>
-        </section>
-
-        <!-- Social Media & Footer Links -->
-        <div class="footer_cont">
-            <div class="socialmedia_icons">
-                <a href="#" class="icon"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#" class="icon"><i class="fa-brands fa-facebook"></i></a>
-                <a href="#" class="icon"><i class="fa-brands fa-square-x-twitter"></i></a>
-                <a href="#" class="icon"><i class="fa-brands fa-youtube"></i></a>
-            </div>
-            <div class="footer_nav">
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="{% url 'home:about' %}">About Us</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Movies</a></li>
-                </ul>
-            </div>
-
-            <div class="container mt-3">
-                <div class="d-flex justify-content-center">
-                    <a href="{% url 'home:privacy_policy' %}" class="text-white text-decoration-none mx-3">Privacy Policy</a>
-                    <a href="/terms-and-conditions" class="text-white text-decoration-none mx-3">Terms & Conditions</a>
-                    <a href="/contact-us" class="text-white text-decoration-none mx-3">Contact Us</a>
+            <div class="row border-top border-secondary pt-3 mt-3">
+                <div class="col-md-6 small">
+                    Designed & Developed by <a href="https://www.scitt.tech.it" target="_blank" class="text-white text-decoration-none">SCITT Cohort 2025</a>
+                </div>
+                <div class="col-md-6 text-md-end small">
+                    <a href="{% url 'accounts:privacy_policy' %}" class="text-white-50 text-decoration-none mx-2">Privacy Policy</a>
+                    <a href="/terms-and-conditions" class="text-white-50 text-decoration-none mx-2">Terms & Conditions</a>
+                    <a href="/contact-us" class="text-white-50 text-decoration-none mx-2">Contact Us</a>
+                    <span class="d-block d-md-inline">© 2025 Movies Store. All Rights Reserved.</span>
                 </div>
             </div>
         </div>
-
     </footer>
 
     <!-- Bootstrap JS -->
