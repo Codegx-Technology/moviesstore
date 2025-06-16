@@ -23,7 +23,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-
+  
 </head>
 <body>
 
@@ -31,18 +31,13 @@
      <header>
         <nav>
             <ul>
-
                 <li><a href="">Home</a></li>
                 <li><a href="">About us</a></li>
-
-                <li><a href=""><i class="fa-solid fa-house-user"></i>Home</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">Contact</a></li>
-
+                <li><a href="{% url 'home:cart' %}">Cart</a></li>
                 <li><a href="">Movies</a></li>
-                <li><a href="{% url 'privacy_policy' %}">Privacy Policy</a></li>
+                <li><a href="{% url 'home:privacy_policy' %}">Privacy Policy</a></li>
             </ul>
-
+          
     <!--Our Header section -->
     <header>
         <nav class="p-3 navbar navbar-dark bg-dark navbar-expand-lg">
@@ -62,7 +57,7 @@
                     <div class="navbar-nav ms-auto">
                         <a class="nav-link" href="{% url 'home:about' %}">About</a>
                         <a class="nav-link" href="#">Contact</a>
-                        <a class="nav-link" href="#">Cart</a>
+                        <a class="nav-link" href="{% url 'home:cart' %}">Cart</a>
                         <a class="nav-link" href="{% url 'accounts:login' %}">Login</a>
                     </div>
                 </div>
@@ -80,7 +75,6 @@
 
     <!-- Our Footer Section-->
     <footer>
-
         <section class="p-3 ms-footer d-none d-md-block mt">
             <div class="container">
                 <div class="row mt-3 text-white">
@@ -135,22 +129,6 @@
                 <div class="text-white">
                     <span>© 2025 Movies Store. All Rights Reserved.</span>
                 </div>
-
-        <div class="footer_cont">
-            <div class="socialmedia_icons">
-                <a href="" class = "icon"><i class="fa-brands fa-instagram"></i></a>
-                <a href="" class = "icon"><i class="fa-brands fa-facebook"></i></a>
-                <a href="" class = "icon"><i class="fa-brands fa-square-x-twitter"></i></a>
-                <a href="" class = "icon"><i class="fa-brands fa-youtube"></i></i></a>
-            </div>
-            <div class="footer_nav">
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="{% url 'home:about' %}">About Us</a></li>
-                    <li><a href="">Contact</a></li>
-                    <li><a href="">Movies</a></li>
-                </ul>
-
             </div>
             <div class="container mt-3">
                 <!-- Footer Links Section -->
