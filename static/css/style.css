@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap');
 
 body, html {
-    font-family: 'Lora', sans-serif !important;
+    font-family: 'Lora', sans-serif !important;background-image: ;
 }
 
 /*------------------------------------
@@ -35,7 +35,7 @@ a {
   BACKGROUND STYLES
 ------------------------------------*/
 .bg-index {
-    background: url("../images/about.jpg") no-repeat fixed;
+    background: url("../images/background.jpg") no-repeat fixed;
     background-size: cover;
     background-position: center;
 }
