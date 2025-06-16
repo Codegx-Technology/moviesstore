@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap');
+
+body, html {
+    font-family: 'Lora', sans-serif !important;
+}
+
 /*------------------------------------
   GLOBAL STYLES
 ------------------------------------*/
@@ -5,11 +11,20 @@
     box-sizing: border-box;
 }
 
+a, .nav-link, .footer_nav a, .ms-footer a, .ms-footer-bottom a, .text-white-50, .text-decoration-none {
+    transition: color 0.2s, background 0.2s, text-decoration 0.2s;
+}
+
+a:hover, .nav-link:hover, .footer_nav a:hover, .ms-footer a:hover, .ms-footer-bottom a:hover, .text-white-50:hover, .text-decoration-none:hover {
+    color: #ff9800 !important;
+    text-decoration: underline !important;
+    background: rgba(255, 152, 0, 0.08);
+}
+
 a {
     text-decoration: none;
     color: white;
     font-size: 20px;
-    transition: color 0.2s;
 }
 
     a:hover {
@@ -82,8 +97,6 @@ nav ul li a:focus {
 ------------------------------------*/
 footer {
     width: 100%;
-    position: fixed;
-    bottom: 0;
 }
 
 /* Main footer top section */
