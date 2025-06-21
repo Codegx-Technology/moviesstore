@@ -194,3 +194,11 @@ footer {
     background-color: rgb(39, 37, 37);
 }
 
+/*------------------------------------
+  MOVIE STORE STYLES
+------------------------------------*/
+/*images to be specific size*/
+.card-img-top {
+    max-height: 300px;
+    object-fit: cover;
+}
