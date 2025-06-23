@@ -16,7 +16,7 @@ movies = [
     },
     {
         'id': 4, 'name': 'Titanic', 'price': 11,
-        'description': 'A love story set against the',
+        'description': 'A love story set against the sea',
     },
 ]
 
@@ -25,7 +25,7 @@ def movies_view(request):
         'title': "Movies",
         'movies': movies   
     }
-    return render(request, 'movies/movies.html', {'template_data': template_data})
+    return render(request, 'movies/index.html', {'template_data': template_data})
 
 def movies_show(request, id):
     movie = next((movie for movie in movies if movie['id'] == id), None)
