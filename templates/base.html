@@ -21,7 +21,7 @@
 </head>
 <body>
 
-    <!--Our Header section -->
+    <!--Our Header section shared through out the app -->
     <header>
         <nav class="p-3 navbar navbar-dark bg-dark navbar-expand-lg">
             <div class="container">
@@ -39,6 +39,7 @@
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav ms-auto">
                         <a class="nav-link" href="{% url 'home:about' %}">About</a>
+                        <a class="nav-link" href="{% url 'movies:index' %}">Movies</a>
                         <a class="nav-link" href="#">Contact</a>
                         <a class="nav-link" href="{% url 'cart:cart' %}">Cart</a>
                         <a class="nav-link" href="{% url 'accounts:login' %}">Login</a>
@@ -54,7 +55,7 @@
         {% endblock content %}
     </main>
 
-    <!-- Footer Section -->
+    <!-- Footer Section - shared through out the app -->
     <footer class="bg-dark text-white pt-4">
         <div class="container">
             <div class="row">
