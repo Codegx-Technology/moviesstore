@@ -26,37 +26,31 @@
   
 </head>
 <body>
-    <!--Our Header section -->
-    <header>
-        <nav class="p-3 navbar navbar-dark bg-dark navbar-expand-lg">
-            <div class="container">
-                <a class="navbar-brand" href="{% url 'home:index' %}">
-                    <img src="{% static 'images/logo.png' %}" alt="logo" height="40" />
+
+    <!-- Header / Content Block-->
+     <header>
+        <nav>
+            <ul>
+                <img src="{% static 'images/logo.png' %}" alt="logo" height="40" />
                 </a>
-                <button class="navbar-toggler" type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#navbarNavAltMarkup"
-                        aria-controls="navbarNavAltMarkup"
-                        aria-expanded="false"
-                        aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div class="navbar-nav ms-auto">
-                        <a class="nav-link" href="{% url 'home:about' %}">About</a>
-                        <a class="nav-link" href="#">Contact</a>
-                        <a class="nav-link" href="#">Cart</a>
-                        <a class="nav-link" href="{% url 'accounts:login' %}">Login</a>
-                    </div>
-                </div>
-            </div>
+                <li><a href="{% url 'home:index' %}">Home</a></li>
+                <li><a href="{% url 'home:about' %}">About us</a></li>
+                <li><a href="">Cart</a></li>
+                <li><a href="">Movies</a></li>
+            </ul>
         </nav>
-    </header>
+   {% comment %}
+
 
     <!--This is the end of our Header Section -->
     <!-- Main Content we will inherit our children pages here (they will be injected here)-->
+    {% endcomment %}
     <main>
         {% block content %}
+
+        
+
+        
         {% endblock content %}
     </main>
 
