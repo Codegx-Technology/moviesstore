@@ -42,6 +42,7 @@
 
                         <a class="nav-link" href="{% url 'home:contact-us' %}">Contact</a>
                         <a class="nav-link" href="{% url 'cart:cart' %}">Cart</a>
+                        <a class="nav-link" href="{% url 'movies:movies-view' %}">Movies</a>
                         <a class="nav-link" href="{% url 'accounts:login' %}">Login</a>
                     </div>
                 </div>
@@ -68,7 +69,10 @@
                     <h5 class="fw-bold">MOVIES STORE</h5>
                     <hr class="bg-secondary" />
                     <p class="small">
-                        Welcome to Movies Store, your premier online destination for a cinematic adventure like no other! Dive into the world of movies from the comfort of your own home with our user-friendly and immersive online movie store.
+                        Welcome to Movies Store, your premier online destination for a cinematic adventure like no other!
+                    </p>
+                    <p class="small">
+                        Dive into the world of movies from the comfort of your own home with our user-friendly and immersive online movie store.
                     </p>
                 </div>
                 <!-- Navigation Links Section -->
@@ -77,7 +81,7 @@
                     <hr class="bg-secondary" />
                     <ul class="list-unstyled small">
                         <li><a class="nav-link px-0 text-white-50" href="{% url 'home:about' %}">About</a></li>
-                        <li><a class="nav-link px-0 text-white-50" href="#">Movies</a></li>
+                        <li><a class="nav-link px-0 text-white-50" href="{% url 'movies:movies-view' %}">Movies</a></li>
                         <li><a class="nav-link px-0 text-white-50" href="{% url 'home:contact-us' %}">Contact</a></li>
                         <li><a class="nav-link px-0 text-white-50" href="{% url 'cart:cart' %}">Cart</a></li>
                         <li><a class="nav-link px-0 text-white-50" href="{% url 'accounts:login' %}">Login</a></li>
