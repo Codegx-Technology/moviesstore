@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap');
 
-body, html {
-    font-family: 'Lora', sans-serif !important;background-image: ;
-}
-
 /*------------------------------------
   GLOBAL STYLES
 ------------------------------------*/
@@ -219,4 +215,21 @@ footer {
 .card-img-top {
     max-height: 300px;
     object-fit: cover;
+}
+
+/* Classic hover and active effect for buttons */
+button, .btn {
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+
+button:hover, .btn:hover {
+    background-color: #ff9800 !important;
+    color: #222 !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+
+button:active, .btn:active, button.active, .btn.active {
+    background-color: #e67c00 !important;
+    color: #fff !important;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.18) inset;
 }

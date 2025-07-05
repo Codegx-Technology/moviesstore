@@ -21,17 +21,6 @@
 </head>
 <body>
 
-    <!-- Header / Content Block-->
-     <header>
-        <nav>
-            <ul>
-                <img src="{% static 'images/logo.png' %}" alt="logo" height="40" />
-                </a>
-                <li><a href="{% url 'home:index' %}">Home</a></li>
-                <li><a href="{% url 'home:about' %}">About us</a></li>
-                <li><a href="">Cart</a></li>
-                <li><a href="">Movies</a></li>
-            </ul>
     <!--Our Header section shared through out the app -->
     <header>
         <nav class="p-3 navbar navbar-dark bg-dark navbar-expand-lg">
@@ -50,16 +39,15 @@
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav ms-auto">
                         <a class="nav-link" href="{% url 'home:about' %}">About</a>
-                        <a class="nav-link" href="{% url 'movies:index' %}">Movies</a>
-                        <a class="nav-link" href="#">Contact</a>
+
+                        <a class="nav-link" href="{% url 'home:contact-us' %}">Contact</a>
                         <a class="nav-link" href="{% url 'cart:cart' %}">Cart</a>
                         <a class="nav-link" href="{% url 'accounts:login' %}">Login</a>
                     </div>
                 </div>
             </div>
         </nav>
-   {% comment %}
-
+    </header>
 
     <!-- Main Content -->
     <main>
@@ -90,7 +78,7 @@
                     <ul class="list-unstyled small">
                         <li><a class="nav-link px-0 text-white-50" href="{% url 'home:about' %}">About</a></li>
                         <li><a class="nav-link px-0 text-white-50" href="#">Movies</a></li>
-                        <li><a class="nav-link px-0 text-white-50" href="#">Contact</a></li>
+                        <li><a class="nav-link px-0 text-white-50" href="{% url 'home:contact-us' %}">Contact</a></li>
                         <li><a class="nav-link px-0 text-white-50" href="{% url 'cart:cart' %}">Cart</a></li>
                         <li><a class="nav-link px-0 text-white-50" href="{% url 'accounts:login' %}">Login</a></li>
                     </ul>
@@ -119,7 +107,7 @@
                 <div class="col-md-6 text-md-end">
                     <a href="/" class="text-white-50 text-decoration-none mx-2 small">Home</a>
                     <a href="{% url 'home:about' %}" class="text-white-50 text-decoration-none mx-2 small">About Us</a>
-                    <a href="#" class="text-white-50 text-decoration-none mx-2 small">Contact</a>
+                    <a href="{% url 'home:contact-us' %}" class="text-white-50 text-decoration-none mx-2 small">Contact</a>
                     <a href="{% url 'cart:cart' %}" class="text-white-50 text-decoration-none mx-2 small">Cart</a>
                 </div>
             </div>
@@ -128,9 +116,9 @@
                     <span>Designed & Developed by <a href="https://www.scitt.tech.it" target="_blank" class="text-white text-decoration-none">SCITT Cohort 2025</a></span>
                 </div>
                 <div class="col-md-4 d-flex align-items-center justify-content-center mb-2 mb-md-0">
-                    <a href="{% url 'accounts:privacy_policy' %}" class="text-white-50 text-decoration-none mx-2">Privacy Policy</a>
+                    <a href="{% url 'home:privacy-policy' %}" class="text-white-50 text-decoration-none mx-2">Privacy Policy</a>
                     <a href="/terms-and-conditions" class="text-white-50 text-decoration-none mx-2">Terms & Conditions</a>
-                    <a href="/contact-us" class="text-white-50 text-decoration-none mx-2">Contact Us</a>
+                    <a href="{% url 'home:contact-us' %}" class="text-white-50 text-decoration-none mx-2">Contact Us</a>
                 </div>
                 <div class="col-md-4 d-flex align-items-center justify-content-md-end justify-content-center">
                     <span>© 2025 Movies Store. All Rights Reserved.</span>
