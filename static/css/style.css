@@ -31,7 +31,11 @@ a {
   BACKGROUND STYLES
 ------------------------------------*/
 .bg-index {
-    background: url("../images/banner.jpg") no-repeat fixed;
+    background-image: url("{% static 'Images/banner.jpg' %}") no-repeat fixed; 
+    background-size: cover; 
+    background-position: center; 
+    padding: 80px 20px;
+
     background-size: cover;
     background-position: center;
     height: auto
