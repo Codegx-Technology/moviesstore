@@ -30,24 +30,14 @@ a {
 /*------------------------------------
   BACKGROUND STYLES
 ------------------------------------*/
-.bg-index {
-    background-image: url("{% static 'Images/banner.jpg' %}") no-repeat fixed; 
-    background-size: cover; 
-    background-position: center; 
-    padding: 80px 20px;
-
-    background-size: cover;
-    background-position: center;
-    height: auto
-}
 .bg-image {
-    background: url("../images/banner.jpg") no-repeat fixed;
+    background-image: url("{% static 'Images/homebg.jpg' %}") no-repeat fixed; 
     background-size: cover;
     background-position: center;
 }
 
 .about-bg {
-    background: url("../images/aboutbg.jpg") no-repeat fixed;
+    background-image: url("{% static 'Images/aboutbg.jpg' %}") no-repeat fixed; 
     background-size: cover;
     background-position: center;
 }
