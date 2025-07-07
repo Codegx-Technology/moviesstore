@@ -45,6 +45,9 @@ a {
     background-attachment: fixed;
 }
 
+.bg-gray-body {
+    background-color: #f2f2f2 !important;
+}
 
 nav {
     background: rgba(34, 34, 34, 0.95);
