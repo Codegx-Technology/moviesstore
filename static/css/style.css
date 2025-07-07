@@ -30,23 +30,26 @@ a {
 /*------------------------------------
   BACKGROUND STYLES
 ------------------------------------*/
-.bg-image {
-    background-image: url("{% static 'Images/homebg.jpg' %}") no-repeat fixed; 
+
+.index-bg {
+    background-image: url("/static/images/homebg.jpg");
+    background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-attachment: fixed;
 }
 
 .about-bg {
-    background-image: url("{% static 'Images/aboutbg.jpg' %}") no-repeat fixed; 
+    background-image: url("/static/images/aboutbg.jpg");
+    background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-attachment: fixed;
 }
 
 
 nav {
     background: rgba(34, 34, 34, 0.95);
     padding: 0.75rem 2rem;
-    border-radius: 0 0 12px 12px;
+    border-radius: 0 0 12px  12px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     font-family: 'Poppins', sans-serif;
     margin-bottom: 2rem;
@@ -207,8 +210,10 @@ footer {
 ------------------------------------*/
 /*images to be specific size*/
 .card-img-top {
+    width: 100%;
     max-height: 300px;
     object-fit: cover;
+    display: block;
 }
 
 /* Classic hover and active effect for buttons */

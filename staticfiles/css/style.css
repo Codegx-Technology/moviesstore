@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap');
 
-body, html {
-    font-family: 'Lora', sans-serif !important;background-image: ;
-}
-
 /*------------------------------------
   GLOBAL STYLES
 ------------------------------------*/
@@ -34,11 +30,19 @@ a {
 /*------------------------------------
   BACKGROUND STYLES
 ------------------------------------*/
-.bg-index {
-    background: url("../images/background.jpg") no-repeat fixed;
+
+.bg-image{
+    background-image: url("{% static 'images/homebg.jpg' %}") no-repeat fixed; 
     background-size: cover;
     background-position: center;
 }
+
+.about-bg {
+    background-image: url("{% static 'images/aboutbg.jpg' %}") no-repeat fixed; 
+    background-size: cover;
+    background-position: center;
+}
+
 
 nav {
     background: rgba(34, 34, 34, 0.95);
@@ -90,6 +94,11 @@ nav ul li a:focus {
 ------------------------------------*/
 .navbar a.nav-link {
     color: #FFFEF6 !important;
+}
+/*Body */
+.lead{
+    color: #FFFEF6 !important;
+    font-style: italic;
 }
 
 /*------------------------------------
@@ -194,3 +203,28 @@ footer {
     background-color: rgb(39, 37, 37);
 }
 
+/*------------------------------------
+  MOVIE STORE STYLES
+------------------------------------*/
+/*images to be specific size*/
+.card-img-top {
+    max-height: 300px;
+    object-fit: cover;
+}
+
+/* Classic hover and active effect for buttons */
+button, .btn {
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+
+button:hover, .btn:hover {
+    background-color: #ff9800 !important;
+    color: #222 !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+
+button:active, .btn:active, button.active, .btn.active {
+    background-color: #e67c00 !important;
+    color: #fff !important;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.18) inset;
+}
