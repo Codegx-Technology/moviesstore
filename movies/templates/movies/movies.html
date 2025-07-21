@@ -11,15 +11,12 @@
         {% for movie in template_data.movies %}
         <div class="col-md-4 col-sm-6 mb-4">
             <div class="card shadow-sm h-100 text-center">
-                <img src="{% static 'images/' %}{{ movie.image }}" 
-     alt="{{ movie.name }}" 
-     class="img-fluid rounded-top"
-     style="height: 300px; width: 100%; object-fit: cover;">
-
                 <div class="card-body">
-                    <h5 class="card-title">{{ movie.name }}</h5>
+                    <h5 class="card-title">{{ movie.title }}</h5>
                     <p class="card-text">{{ movie.description }}</p>
-                    <p class="card-text text-success fw-bold">{{ movie.price }}</p>
+                    <p class="card-text">Release Date: {{ movie.release_date }}</p>
+                    <p class="card-text">Genre: {{ movie.genre }}</p>
+                    <p class="card-text">Rating: {{ movie.rating }}</p>
                     <a href="{% url 'movies:movie_detail' movie.id %}" class="btn btn-info">About Movie</a>
                 </div>
             </div>
