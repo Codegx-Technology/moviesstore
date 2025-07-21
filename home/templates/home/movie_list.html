@@ -1,0 +1,43 @@
+{%extends 'base.html'%}
+{%load static%}
+{%block content%}
+
+<head>
+  <style>
+        body { font-family: Arial, sans-serif; padding: 20px; background-color: #f9f9f9; }
+        h1 { text-align: center; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid #ccc; padding: 10px; text-align: left; }
+        th { background-color: #eee; }
+  </style>
+</head>
+
+<h1>Movie List</h1>
+    {% if movie_list %}
+    <table>
+     <thead>
+      <tr>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Release Date</th>
+        <th>Rating</th>
+        <th>Genre</th>
+      </tr>
+     </thead>
+    </table>
+     <tbody>
+      {% for movie in movies %}
+     <tr>
+        <td>{{ movie.title }}</td>
+        <td>{{ movie.description }}</td>
+        <td>{{ movie.release_date }}</td>
+        <td>{{ movie.rating }}</td>
+        <td>{{ movie.genre }}</td>
+     </tr>
+      {% endfor %}
+     </tbody>
+    </table>
+      {% else % }
+      <p>No movies available.</p>
+      {% endif %}
+{%endblock content%}

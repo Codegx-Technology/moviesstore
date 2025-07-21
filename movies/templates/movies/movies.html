@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<h1 class="text-center mt-4">List of Movies</h1>
+<hr/>
+
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        {% for movie in template_data.movies %}
+        <div class="col-md-4 col-sm-6 mb-4">
+            <div class="card shadow-sm h-100 text-center">
+                <div class="card-body">
+                    <h5 class="card-title">{{ movie.title }}</h5>
+                    <p class="card-text">{{ movie.description }}</p>
+                    <p class="card-text">Release Date: {{ movie.release_date }}</p>
+                    <p class="card-text">Genre: {{ movie.genre }}</p>
+                    <p class="card-text">Rating: {{ movie.rating }}</p>
+                    <a href="{% url 'movies:movie_detail' movie.id %}" class="btn btn-info">About Movie</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock content %}
