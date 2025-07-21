@@ -7,6 +7,7 @@ class Movie(models.Model):
     release_date = models.DateField()
     rating = models.DecimalField(max_digits=3, decimal_places=1)
     genre = models.CharField(max_length=50)
+    image = models.ImageField(upload_to='movies/images/', blank=True, null=True)
     
 
     def __str__(self):
