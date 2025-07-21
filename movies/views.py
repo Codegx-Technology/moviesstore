@@ -1,5 +1,5 @@
 from tempfile import template
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from home.models import Movie  # Import the Movie model
 
 # Removed dummy movies list
@@ -14,12 +14,9 @@ def movies_view(request):
     return render(request, 'movies/movies.html', {'template_data': template_data})
 
 def movie_detail(request, id):
-    movie = None  # Placeholder, will fetch from DB in next step
-    if not movie:
-        return render(request, 'movies/movie_not_found.html', {'id': id})
-    
+    movie = get_object_or_404(Movie, id=id)
     template_data = {
-        'title': '',  # Placeholder
+        'title': movie.title,
         'movie': movie
     }
-    return render(request, 'movies/movie_detail.html', {'template_data': template_data})
+    return render(request, 'movies/show.html', {'template_data': template_data})
