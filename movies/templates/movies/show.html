@@ -9,8 +9,8 @@
                 <h2>{{ template_data.movie.title }}</h2>
                 <hr />
 
-                <img src="{% static 'images/about.jpg' %}" class="img-fluid rounded mb-3" alt="Movie Image">
-
+                <img src="{{ template_data.movie.image.url }}" alt="{{ template_data.movie.title }}" class="img-fluid mb-4 movie-poster">
+                
                 <p><strong>Description:</strong></p>
                 <p>{{ template_data.movie.description }}</p>
 

@@ -37,12 +37,12 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav ms-auto">
-                        <a class="nav-link" href="{% url 'home:index' %}">Home</a>  
-                        <a class="nav-link" href="{% url 'home:about' %}">About</a>
-                        <a class="nav-link" href="{% url 'home:contact-us' %}">Contact</a>
-                        <a class="nav-link" href="{% url 'cart:cart' %}">Cart</a>
-                        <a class="nav-link" href="{% url 'movies:movies-view' %}">Movies</a>
-                        <a class="nav-link" href="{% url 'accounts:login' %}">Login</a>
+                        <a class="nav-link {% if request.resolver_match.url_name == 'index' %}active{% endif %}" href="{% url 'home:index' %}">Home</a>  
+                        <a class="nav-link {% if request.resolver_match.url_name == 'about' %}active{% endif %}" href="{% url 'home:about' %}">About</a>
+                        <a class="nav-link {% if request.resolver_match.url_name == 'contact-us' %}active{% endif %}" href="{% url 'home:contact-us' %}">Contact</a>
+                        <a class="nav-link {% if request.resolver_match.url_name == 'cart' %}active{% endif %}" href="{% url 'cart:cart' %}">Cart</a>
+                        <a class="nav-link {% if request.resolver_match.url_name == 'movies-view' %}active{% endif %}" href="{% url 'movies:movies-view' %}">Movies</a>
+                        <a class="nav-link {% if request.resolver_match.url_name == 'login' %}active{% endif %}" href="{% url 'accounts:login' %}">Login</a>
                     </div>
                 </div>
             </div>

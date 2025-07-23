@@ -3,7 +3,7 @@
 
 {% block content %}
 <div class="container mt-4">
-    <img src="{% static 'images/' %}{{ template_data.movie.image }}" alt="{{ template_data.movie.name }}" class="img-fluid mb-4">
+    <img src="{{ template_data.movie.image.url }}" alt="{{ template_data.movie.name }}" class="img-fluid mb-4" >
 
     <h2>{{ template_data.movie.name }}</h2>
     <p><strong>Director:</strong> {{ template_data.movie.director }}</p>
