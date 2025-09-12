@@ -20,8 +20,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-
-    <!--Our Header section -->
+    <!--Our Header section shared through out the app -->
     <header>
         <nav class="p-3 navbar navbar-dark bg-dark navbar-expand-lg">
             <div class="container">
@@ -38,10 +37,12 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav ms-auto">
-                        <a class="nav-link" href="{% url 'home:about' %}">About</a>
-                        <a class="nav-link" href="#">Contact</a>
-                        <a class="nav-link" href="{% url 'cart:cart' %}">Cart</a>
-                        <a class="nav-link" href="{% url 'accounts:login' %}">Login</a>
+                        <a class="nav-link {% if request.resolver_match.url_name == 'index' %}active{% endif %}" href="{% url 'home:index' %}">Home</a>  
+                        <a class="nav-link {% if request.resolver_match.url_name == 'about' %}active{% endif %}" href="{% url 'home:about' %}">About</a>
+                        <a class="nav-link {% if request.resolver_match.url_name == 'contact-us' %}active{% endif %}" href="{% url 'home:contact-us' %}">Contact</a>
+                        <a class="nav-link {% if request.resolver_match.url_name == 'cart' %}active{% endif %}" href="{% url 'cart:cart' %}">Cart</a>
+                        <a class="nav-link {% if request.resolver_match.url_name == 'movies-view' %}active{% endif %}" href="{% url 'movies:movies-view' %}">Movies</a>
+                        <a class="nav-link {% if request.resolver_match.url_name == 'login' %}active{% endif %}" href="{% url 'accounts:login' %}">Login</a>
                     </div>
                 </div>
             </div>
@@ -51,10 +52,14 @@
     <!-- Main Content -->
     <main>
         {% block content %}
+
+        
+
+        
         {% endblock content %}
     </main>
 
-    <!-- Footer Section -->
+    <!-- Footer Section - shared through out the app -->
     <footer class="bg-dark text-white pt-4">
         <div class="container">
             <div class="row">
@@ -63,7 +68,10 @@
                     <h5 class="fw-bold">MOVIES STORE</h5>
                     <hr class="bg-secondary" />
                     <p class="small">
-                        Welcome to Movies Store, your premier online destination for a cinematic adventure like no other! Dive into the world of movies from the comfort of your own home with our user-friendly and immersive online movie store.
+                        Welcome to Movies Store, your premier online destination for a cinematic adventure like no other!
+                    </p>
+                    <p class="small">
+                        Dive into the world of movies from the comfort of your own home with our user-friendly and immersive online movie store.
                     </p>
                 </div>
                 <!-- Navigation Links Section -->
@@ -72,8 +80,8 @@
                     <hr class="bg-secondary" />
                     <ul class="list-unstyled small">
                         <li><a class="nav-link px-0 text-white-50" href="{% url 'home:about' %}">About</a></li>
-                        <li><a class="nav-link px-0 text-white-50" href="#">Movies</a></li>
-                        <li><a class="nav-link px-0 text-white-50" href="#">Contact</a></li>
+                        <li><a class="nav-link px-0 text-white-50" href="{% url 'movies:movies-view' %}">Movies</a></li>
+                        <li><a class="nav-link px-0 text-white-50" href="{% url 'home:contact-us' %}">Contact</a></li>
                         <li><a class="nav-link px-0 text-white-50" href="{% url 'cart:cart' %}">Cart</a></li>
                         <li><a class="nav-link px-0 text-white-50" href="{% url 'accounts:login' %}">Login</a></li>
                     </ul>
@@ -102,7 +110,7 @@
                 <div class="col-md-6 text-md-end">
                     <a href="/" class="text-white-50 text-decoration-none mx-2 small">Home</a>
                     <a href="{% url 'home:about' %}" class="text-white-50 text-decoration-none mx-2 small">About Us</a>
-                    <a href="#" class="text-white-50 text-decoration-none mx-2 small">Contact</a>
+                    <a href="{% url 'home:contact-us' %}" class="text-white-50 text-decoration-none mx-2 small">Contact</a>
                     <a href="{% url 'cart:cart' %}" class="text-white-50 text-decoration-none mx-2 small">Cart</a>
                 </div>
             </div>
@@ -111,9 +119,9 @@
                     <span>Designed & Developed by <a href="https://www.scitt.tech.it" target="_blank" class="text-white text-decoration-none">SCITT Cohort 2025</a></span>
                 </div>
                 <div class="col-md-4 d-flex align-items-center justify-content-center mb-2 mb-md-0">
-                    <a href="{% url 'accounts:privacy_policy' %}" class="text-white-50 text-decoration-none mx-2">Privacy Policy</a>
+                    <a href="{% url 'home:privacy-policy' %}" class="text-white-50 text-decoration-none mx-2">Privacy Policy</a>
                     <a href="/terms-and-conditions" class="text-white-50 text-decoration-none mx-2">Terms & Conditions</a>
-                    <a href="/contact-us" class="text-white-50 text-decoration-none mx-2">Contact Us</a>
+                    <a href="{% url 'home:contact-us' %}" class="text-white-50 text-decoration-none mx-2">Contact Us</a>
                 </div>
                 <div class="col-md-4 d-flex align-items-center justify-content-md-end justify-content-center">
                     <span>© 2025 Movies Store. All Rights Reserved.</span>
